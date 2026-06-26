@@ -1,0 +1,11 @@
+<mat-list-item class="item">
+  <div class="wrapper">
+    <app-resolve-todo [id]="id()" [completed]="completed()"></app-resolve-todo>
+
+    <div class="content">
+      <span class="text">{{ text() }}</span>
+
+      <app-delete-todo [id]="id()" />
+    </div>
+  </div>
+</mat-list-item>

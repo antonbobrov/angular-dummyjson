@@ -1,0 +1,30 @@
+<form (submit)="submit($event)">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Username</mat-label>
+    <input matInput type="text" name="username" [formControl]="username" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password" [formControl]="password" />
+  </mat-form-field>
+
+  @if (error()) {
+    <app-error-message [message]="error()" class="error"></app-error-message>
+  }
+
+  <div class="submit-row">
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit"
+      [disabled]="isLoading()"
+    >
+      Log In
+    </button>
+
+    @if (isLoading()) {
+      <mat-spinner diameter="24"></mat-spinner>
+    }
+  </div>
+</form>

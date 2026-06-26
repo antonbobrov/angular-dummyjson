@@ -1,0 +1,23 @@
+<main>
+  <mat-toolbar>
+    <a
+      mat-button
+      [routerLink]="routes.home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </a>
+
+    <a mat-button [routerLink]="routes.todos" routerLinkActive="active"
+      >Todos</a
+    >
+
+    <span class="spacer"></span>
+
+    <span class="user-name">{{ firstName() }} {{ lastName() }}</span>
+    <button mat-button type="button" (click)="logout()">Logout</button>
+  </mat-toolbar>
+
+  <router-outlet />
+</main>

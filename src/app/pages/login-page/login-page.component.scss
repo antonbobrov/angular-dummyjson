@@ -1,0 +1,16 @@
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 25rem;
+
+  mat-card-header {
+    padding-bottom: 1.5rem;
+  }
+}

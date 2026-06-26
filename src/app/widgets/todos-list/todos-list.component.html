@@ -1,0 +1,20 @@
+<app-error-message [message]="error()"></app-error-message>
+
+@if (isLoading()) {
+  <div class="list-loading">
+    <mat-spinner diameter="36"></mat-spinner>
+  </div>
+} @else {
+  <mat-nav-list class="list">
+    @for (item of list(); track item.id) {
+      <app-todo-item
+        class="item"
+        [id]="item.id"
+        [text]="item.todo"
+        [completed]="item.completed"
+      ></app-todo-item>
+    } @empty {
+      <p class="empty-message">No todos yet</p>
+    }
+  </mat-nav-list>
+}

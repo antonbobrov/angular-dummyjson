@@ -1,0 +1,21 @@
+.list-loading {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.empty-message {
+  font: var(--mat-sys-title-small);
+  margin: 0;
+}

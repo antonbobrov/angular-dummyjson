@@ -1,0 +1,15 @@
+.add-todo-form {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.add-todo-form mat-form-field {
+  flex: 1;
+}
+
+.add-todo-form button[mat-flat-button] {
+  flex-shrink: 0;
+  height: auto;
+  min-width: 6.25rem;
+}

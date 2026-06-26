@@ -1,0 +1,28 @@
+mat-toolbar {
+  padding: 0;
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+}
+
+a[mat-button].active {
+  background-color: color-mix(
+    in srgb,
+    var(--mat-sys-on-surface) 12%,
+    transparent
+  );
+  color: var(--mat-sys-primary);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.user-name {
+  font: var(--mat-sys-body-medium);
+}
+
+main {
+  padding: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}

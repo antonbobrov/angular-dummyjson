@@ -1,0 +1,10 @@
+<div class="resolve">
+  @if (isLoading()) {
+    <mat-spinner diameter="20"></mat-spinner>
+  } @else {
+    <mat-checkbox
+      [checked]="completed()"
+      (change)="toggle($event.checked)"
+    ></mat-checkbox>
+  }
+</div>

@@ -1,0 +1,27 @@
+<form class="add-todo-form" (submit)="submit($event)">
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>New todo</mat-label>
+    <input matInput type="text" name="todo" [formControl]="todo" />
+    @if (submitted() && todo.hasError('required')) {
+      <mat-error>Todo is required</mat-error>
+    }
+    @if (submitted() && todo.hasError('maxlength')) {
+      <mat-error>Maximum {{ maxTodoLength }} characters</mat-error>
+    }
+  </mat-form-field>
+
+  <button
+    mat-flat-button
+    color="primary"
+    type="submit"
+    [disabled]="isLoading()"
+  >
+    @if (isLoading()) {
+      <mat-spinner diameter="20"></mat-spinner>
+    } @else {
+      Add
+    }
+  </button>
+</form>
+
+<app-error-message [message]="error()"></app-error-message>
